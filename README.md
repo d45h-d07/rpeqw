@@ -1,2 +1,2 @@
-# rpleqw
-An 'Equation Writer' utility for the HP 49/50 calculators which leverages the interactive stack.
+# rpeqw
+An 'Equation Writer' utility for the HP 49/50 calculators which leverages the interactive RPN stack.
