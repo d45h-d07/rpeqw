@@ -28,7 +28,7 @@ DIR
   INVV
   \<<
     AGB\-> TOLST
-    { INV } + \->ALG
+    1 SWAP + { / } + \->ALG
   \>>
   SQTT
   \<<
@@ -38,7 +38,7 @@ DIR
   SQQ
   \<<
     AGB\-> TOLST
-    { SQ } + \->ALG
+    { 2 ^ } + \->ALG
   \>>
   POWW
   \<< 
