@@ -1,0 +1,198 @@
+%%HP: T(3)A(R)F(.);
+DIR
+  ADDD
+  \<<
+    IF LSTORSTR
+    THEN
+      +
+    ELSE
+      AGB2 TOLS2
+      { + } + \->ALG
+    END
+  \>>
+  SUBB
+  \<< 
+    AGB2 TOLS2
+    { - } + \->ALG
+  \>>
+  MULL
+  \<< 
+    AGB2 TOLS2
+    { * } + \->ALG
+  \>>
+  DIVV
+  \<< 
+    AGB2 TOLS2
+    { / } + \->ALG
+  \>>
+  INVV
+  \<<
+    AGB\-> TOLST
+    { INV } + \->ALG
+  \>>
+  SQTT
+  \<<
+    AGB\-> TOLST
+    { \v/ } + \->ALG
+  \>>
+  SQQ
+  \<<
+    AGB\-> TOLST
+    { SQ } + \->ALG
+  \>>
+  POWW
+  \<< 
+    AGB2 TOLS2
+    { ^ } + \->ALG
+  \>>
+  EXPP
+  \<<
+    AGB\-> TOLST
+    { EXP } + \->ALG
+  \>>
+  LNN
+  \<<
+    AGB\-> TOLST
+    { LN } + \->ALG
+  \>>
+  SINN
+  \<<
+    AGB\-> TOLST
+    { SIN } + \->ALG
+  \>>
+  COSS
+  \<<
+    AGB\-> TOLST
+    { COS } + \->ALG
+  \>>
+  TANN
+  \<<
+    AGB\-> TOLST
+    { TAN } + \->ALG
+  \>>
+  ASINN
+  \<<
+    AGB\-> TOLST
+    { ASIN } + \->ALG
+  \>>
+  ACOSS
+  \<<
+    AGB\-> TOLST
+    { ACOS } + \->ALG
+  \>>
+  ATANN
+  \<<
+    AGB\-> TOLST
+    { ATAN } + \->ALG
+  \>>
+  XRT
+  \<<
+    AGB2 INVV TOLS2
+    { ^ } + \->ALG
+  \>>
+  ABSS
+  \<<
+    AGB\-> TOLST
+    { ABS } + \->ALG
+  \>>
+  ARGG
+  \<<
+    AGB\-> TOLST
+    { ARG } + \->ALG
+  \>>
+  LOGG
+  \<<
+    AGB\-> TOLST
+    { LOG } + \->ALG
+  \>>
+  ALOGG
+  \<<
+    AGB\-> TOLST
+    { ALOG } + \->ALG
+  \>>
+  SINHH
+  \<<
+    AGB\-> TOLST
+    { SINH } + \->ALG
+  \>>
+  COSHH
+  \<<
+    AGB\-> TOLST
+    { COSH } + \->ALG
+  \>>
+  TANHH
+  \<<
+    AGB\-> TOLST
+    { TANH } + \->ALG
+  \>>
+  ASINHH
+  \<<
+    AGB\-> TOLST
+    { ASINH } + \->ALG
+  \>>
+  ACOSHH
+  \<<
+    AGB\-> TOLST
+    { ACOSH } + \->ALG
+  \>>
+  ATANHH
+  \<<
+    AGB\-> TOLST
+    { ATANH } + \->ALG
+  \>>
+  AGB\->
+  \<<
+    DUP
+    IF TYPE 9 ==
+    THEN
+      \->LST
+    END
+  \>>
+  AGB2
+  \<<
+    AGB\-> SWAP AGB\-> SWAP
+  \>>
+  LSTORSTR
+  \<<
+    DUP2 DUP2
+    TYPE 5 == SWAP TYPE 5 == OR UNROT
+    TYPE 2 == SWAP TYPE 2 == OR
+    OR
+  \>>
+  TOLS2
+  \<<
+    IF LSTORSTR
+    THEN
+      +
+    ELSE
+      2 \->LIST
+    END
+  \>>
+  TOLST
+  \<<
+    DUP
+    IF TYPE 5 \=/
+    THEN
+      1 \->LIST
+    END
+  \>>
+  RPEQKEYS
+  \<< RCLKEYS 'OLDKEYS' STO
+  { ADDD 95.0 SUBB 85.0 MULL 75.0 DIVV 65.0 INVV 64.0 SQTT 52.0
+  SQQ 52.2 POWW 51.0 EXPP 51.2 LNN 51.3 SINN 53.0 COSS 54.0
+  TANN 55.0 ASINN 53.2 ACOSS 54.2 ATANN 55.2 XRT 52.3 ABSS 65.2
+  ARGG 65.3 LOGG 61.3 ALOGG 61.2 SINHH 53.6 COSHH 54.6 TANHH 55.6
+  ASINHH 53.51 ACOSHH 54.51 ATANHH 55.51 }
+  STOKEYS
+  \>>
+  RSTKEYS
+  \<< RCLKEYS 'OLDKEYS' STO 0 DELKEYS
+  \>>
+  $ROMID 1613
+  $CONFIG 1
+  $TITLE "RPEQW Expression and Equation Builder"
+  $VISIBLE { ADDD SUBB MULL DIVV INVV SQTT SQQ POWW EXPP LNN SINN COSS TANN
+  ASINN ACOSS ATANN XRT ABSS ARGG LOGG ALOGG SINHH COSHH TANHH ASINHH ACOSHH
+  ATANHH RPEQKEYS RSTKEYS }
+  $HIDDEN { AGB\-> AGB2 LSTORSTR TOLS2 TOLST }
+END
