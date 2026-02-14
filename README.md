@@ -26,7 +26,7 @@ This utility makes extensive use of the →ALG and →LST routines included in L
 
 ## Installation
 1. Using an SD card or [Kermit protocol](https://www.kermitproject.org/hp48filetransfer.html) over a standard mini USB cable, transfer either the [rpeqw.lib](https://github.com/d45h-d07/rpeqw/releases/download/v0.1.0-alpha/rpeqw.lib) library object or the [rpeqw.rpl](https://github.com/d45h-d07/rpeqw/blob/main/rpeqw.rpl) source file to your HP 49g+/50g calculator
-   1. The rest of the instructions shall assume that the library file was chosen (menu 2269 has a library creator utility to package the source code). It is also strongly recommended to toggle system flag 117 to use soft menus.
+   1. The rest of the instructions shall assume that the library file was chosen (if not, menu 256 has a `CRLIB` library creator utility to package the source code). It is also strongly recommended to toggle system flag 117 to use soft menus.
 2. Find the soft menu command corresponding to `rpeqw.lib` in the home directory and push its corresponding function key to place it on the stack
 3. Now store it to a suitable port (e.g., `2 STO`)
 4. Next, open the LIBRARY menu, select the appropriate port, and look for the soft menu entry `1613`
