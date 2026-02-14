@@ -1,15 +1,10 @@
 %%HP: T(3)A(R)F(.);
-DIR
-    @ 7-bit ascii string -> calc object
-    IN
-        \<<
-            \->STR 3 TRANSIO RCLF SIZE 3 >
-            #2F34Dh #3016Bh IFTE SYSEVAL + STR\->
-        \>>
-    @ Calc object -> 7-bit ascii string
-    OUT
-        \<<
-            STD 64 STWS \->STR 3 TRANSIO RCLF SIZE 3 >
-            #2F34Fh #2FEC9h IFTE SYSEVAL
-        \>>
-END
+\<< RCWS RCLF \-> ws f
+  \<< 3 TRANSIO DUP TYPE 2 IF == THEN
+    \->STR f SIZE 3 > #2F34Dh #3016Bh IFTE SYSEVAL + STR\->
+    ELSE
+    STD 64 STWS \->STR f SIZE 3 > #2F34Fh #2FEC9h IFTE SYSEVAL
+    END
+    ws STWS f STOF
+  \>>
+\>>

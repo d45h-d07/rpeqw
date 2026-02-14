@@ -1,6 +1,8 @@
 # rpeqw
 An 'Equation Writer' utility for the HP 49/50 calculators which leverages the interactive RPN stack.
 
+The included `INOUT` programme is not mine, but it's quite useful for translating between LF and CRLF line endings, and sharing content between emulators and physical devices. I found the code in this [HP Museum post](https://www.hpmuseum.org/forum/thread-13941-post-123629.html#pid123629).
+
 **_NOTE_**: This software is distributed as is, and the author is not responsible for freezes, crashes or lost data. The usual caveats regarding third party scripts and code apply; please exercise caution and take appropriate precautionary measures. The following steps are recommended for safely testing this code.
 
 1. Back up your calculator data either to a PC or an SD card
