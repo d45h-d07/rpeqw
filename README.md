@@ -39,7 +39,7 @@ The source code uses the Development lib functions →ALG and →LST, so this li
    1. On an HP 49/50 emulator, it might be necessary to delete the first line from the code and run ASCII translation -- check that it now registers as a valid directory after this step
 5. Go into the `RPEQW.RPL` directory
 6. Run the `CRLIB` command, and a library object with ID 1613 should appear on level 1 of the stack
-7. (Recommended) Now you could follow steps 6 to 9 from the previous sub-section to start using the library
+7. (Recommended) Now you could follow steps 3 to 9 from the previous sub-section to start using the library
 
 ## Examples
 For each of the examples below, start by toggling off the USER keyboard and try inputting these expressions directly into the interactive stack. Then lock the USER keyboard and try entering the same expressions again.
