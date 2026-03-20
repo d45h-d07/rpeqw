@@ -1,7 +1,7 @@
 # rpeqw
 An 'Equation Writer' utility for the HP 49/50 calculators which leverages the interactive RPN stack.
 
-The included `INOUT` programme is not mine, but it's quite useful for translating between LF and CRLF line endings, and sharing content between emulators and physical devices. I found the code in this [HP Museum post](https://www.hpmuseum.org/forum/thread-13941-post-123629.html#pid123629).
+The included `INOUT` program is not mine, but it's quite useful for translating between LF and CRLF line endings, and sharing content between emulators and physical devices. I found the code in this [HP Museum post](https://www.hpmuseum.org/forum/thread-13941-post-123629.html#pid123629).
 
 **_NOTE_**: This software is distributed as is, and the author is not responsible for freezes, crashes or lost data. The usual caveats regarding third party scripts and code apply; please exercise caution and take appropriate precautionary measures. The following steps are recommended for safely testing this code.
 
@@ -17,15 +17,9 @@ To the best of this author's knowledge, no system flags or other built-in utilit
 
 The main concept behind this utility is that it should ideally permit the user to build numeric and symbolic expressions, formulae and equations of arbitrary complexity using the interactive stack exclusively and permit matching a textbook or handwritten formula exactly, thus obviating the need for a separate equation writer app or algebraic line input altogether. The efficiency gains of such a feature seem to be self-evident, not to mention the resulting operational smoothness and ease of use inherent in sticking to RPN entry exclusively.
 
-## Requirements
-This utility makes extensive use of the →ALG and →LST routines included in Library 256; therefore, it must be attached prior to installing the RPN equation writer.
-
-1. Ensure the active directory is set to HOME
-2. Type `256 ATTACH` and press ENTER
-3. Verify that the 'Developer lib' entry now appears at the bottom of the APPS menu
-
 ## Installation
-1. Using an SD card or [Kermit protocol](https://www.kermitproject.org/hp48filetransfer.html) over a standard mini USB cable, transfer either the [rpeqw.lib](https://github.com/d45h-d07/rpeqw/releases/download/v0.1.1-alpha/rpeqw.lib) library object or the [rpeqw.rpl](https://github.com/d45h-d07/rpeqw/blob/textbook/rpeqw.rpl) source file to your HP 49g+/50g calculator
+### Transfer the library file (recommended)
+1. Using an SD card or [Kermit protocol](https://www.kermitproject.org/hp48filetransfer.html) over a standard mini USB cable, transfer either the [rpeqw.lib](https://github.com/d45h-d07/rpeqw/releases/download/v0.1.3-alpha/rpeqw.lib) library object or the [rpeqw.rpl](https://github.com/d45h-d07/rpeqw/blob/textbook/rpeqw.rpl) source file to your HP 49g+/50g calculator
    1. The rest of the instructions shall assume that the library file was chosen (if not, menu 256 has a `CRLIB` library creator utility to package the source code). It is also strongly recommended to toggle system flag 117 to use soft menus.
 2. Find the soft menu command corresponding to `rpeqw.lib` in the home directory and push its corresponding function key to place it on the stack
 3. Now store it to a suitable port (e.g., `2 STO`)
@@ -34,7 +28,18 @@ This utility makes extensive use of the →ALG and →LST routines included in L
 6. Now go back to the main LIBRARY menu, and you should see an `RPEQW` folder soft menu entry in there -- press this key to go inside the menu
 7. Press LSHIFT NXT(PREV), and then the soft menu key corresponding to RPEQK (short for RPEQKEYS), which will take a second or so to generate the USER keyboard assignments for this utility
 8. Ensure the USER lock is enabled (LSHIFT ALPHA LSHIFT ALPHA, unless system flag 61 is set, in which case hitting this sequence just once will toggle the lock)
-9. This utility is now ready for use -- try inputting some expressions using the interactive stack (see some demonstration examples below)
+9. This utility is now ready for use -- try inputting some expressions using the interactive stack (see some demonstration examples in the next main section)
+
+### Install from source
+The source code uses the Development lib functions →ALG and →LST, so this library must be attached first.
+1. Switch to the HOME directory (otherwise the 'Development lib' app menu item will not appear)
+2. If you have an older version of RPEQW attached as a library or folder, purge it now (after backing it up if you prefer)
+3. Run the command `256 ATTACH`
+4. Transfer the `rpeqw.rpl` source file to the calculator
+   1. On an HP 49/50 emulator, it might be necessary to delete the first line from the code and run ASCII translation -- check that it now registers as a valid directory after this step
+5. Go into the `RPEQW.RPL` directory
+6. Run the `CRLIB` command, and a library object with ID 1613 should appear on level 1 of the stack
+7. (Recommended) Now you could follow steps 6 to 9 from the previous sub-section to start using the library
 
 ## Examples
 For each of the examples below, start by toggling off the USER keyboard and try inputting these expressions directly into the interactive stack. Then lock the USER keyboard and try entering the same expressions again.
