@@ -1,7 +1,8 @@
 # rpeqw
 An 'Equation Writer' utility for the HP 49/50 calculators which leverages the interactive RPN stack.
 
-The included `INOUT` program is not mine, but it's quite useful for translating between LF and CRLF line endings, and sharing content between emulators and physical devices. I found the code in this [HP Museum post](https://www.hpmuseum.org/forum/thread-13941-post-123629.html#pid123629).
+The included `INOUT` program is not mine, but it's quite useful for translating between HP and PC text characters, and sharing content between emulators and 
+physical devices. I found the code in this [HP Museum post](https://www.hpmuseum.org/forum/thread-13941-post-123629.html#pid123629).
 
 **_NOTE_**: This software is distributed as is, and the author is not responsible for freezes, crashes or lost data. The usual caveats regarding third party scripts and code apply; please exercise caution and take appropriate precautionary measures. The following steps are recommended for safely testing this code.
 
@@ -44,9 +45,9 @@ The source code uses the Development lib functions →ALG and →LST, so this li
 ## Examples
 For each of the examples below, start by toggling off the USER keyboard and try inputting these expressions directly into the interactive stack. Then lock the USER keyboard and try entering the same expressions again.
 
-First, let us switch the calculator to Exact mode before trying any of the examples. Next, with the USER keyboard disabled, push '1.2 / 3' onto the stack.
+First, let us switch the calculator to Exact mode before trying any of the examples. Next, with the USER keyboard disabled, push '1.2 + 3' onto the stack.
 
-Hit the SQRT button and then tell the calculator *not* to switch modes (we want to stay in Exact mode at all times) -- what happens? Now try the same exercise with the USER keyboard locked, using both partial (or fully) algebraic and pure RPN entry. Lastly, evaluate the expression once it's complete.
+Hit the SQRT button and then tell the calculator *not* to switch modes (we want to stay in Exact mode at all times) -- what happens? Now try the same exercise with the USER keyboard locked, using both partial (or fully) algebraic and pure RPN entry (_WARNING_: currently the USER keyboard does not support algebraic entry between ticks, so please do this in normal mode first and switch back to USER mode once the algebraic object has been pushed). Lastly, evaluate the expression once it's complete.
 
 Here is a typical compounding amount calculation (again try it using the default settings followed by the USER keyboard, sticking with RPN all the way):
 
