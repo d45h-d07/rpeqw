@@ -6,139 +6,229 @@ DIR
     THEN
       +
     ELSE
-      AGB2 TOLS2
-      { + } + \->ALG
+      \-> x y
+        \<<
+          "'" x DRPHT "+" y DRPHT "'"
+          + + + + OBJ\->
+        \>>
     END
   \>>
   SUBB
   \<< 
-    AGB2 TOLS2
-    { - } + \->ALG
+    \-> x y
+      \<<
+        "'" x DRPHT "-(" y DRPHT ")'"
+        + + + + OBJ\->
+      \>>
   \>>
   MULL
   \<< 
-    AGB2 TOLS2
-    { * } + \->ALG
+    \-> x y
+      \<<
+        "'(" x DRPHT ")*(" y DRPHT ")'"
+        + + + + OBJ\->
+      \>>
   \>>
   DIVV
   \<< 
-    AGB2 TOLS2
-    { / } + \->ALG
+    \-> x y
+      \<<
+        "'(" x DRPHT ")/(" y DRPHT ")'"
+        + + + + OBJ\->
+      \>>
   \>>
   INVV
   \<<
-    AGB\-> TOLST
-    { INV } + \->ALG
+    \-> x
+      \<<
+        "'INV(" x DRPHT ")'"
+        + + OBJ\->
+      \>>
   \>>
   SQTT
   \<<
-    AGB\-> TOLST
-    { \v/ } + \->ALG
+    \-> x
+      \<<
+        "'\v/(" x DRPHT ")'"
+        + + OBJ\->
+      \>>
   \>>
   SQQ
   \<<
-    AGB\-> TOLST
-    { SQ } + \->ALG
+    \-> x
+      \<<
+        "'SQ(" x DRPHT ")'"
+        + + OBJ\->
+      \>>
   \>>
   POWW
   \<< 
-    AGB2 TOLS2
-    { ^ } + \->ALG
+    \-> x y
+      \<<
+        "'(" x DRPHT ")^(" y DRPHT ")'"
+        + + + + OBJ\->
+      \>>
   \>>
   EXPP
   \<<
-    AGB\-> TOLST
-    { EXP } + \->ALG
+    \-> x
+      \<<
+        "'EXP(" x DRPHT ")'"
+        + + OBJ\->
+      \>>
   \>>
   LNN
   \<<
-    AGB\-> TOLST
-    { LN } + \->ALG
+    \-> x
+      \<<
+        "'LN(" x DRPHT ")'"
+        + + OBJ\->
+      \>>
   \>>
   SINN
   \<<
-    AGB\-> TOLST
-    { SIN } + \->ALG
+    \-> x
+      \<<
+        "'SIN(" x DRPHT ")'"
+        + + OBJ\->
+      \>>
   \>>
   COSS
   \<<
-    AGB\-> TOLST
-    { COS } + \->ALG
+    \-> x
+      \<<
+        "'COS(" x DRPHT ")'"
+        + + OBJ\->
+      \>>
   \>>
   TANN
   \<<
-    AGB\-> TOLST
-    { TAN } + \->ALG
+    \-> x
+      \<<
+        "'TAN(" x DRPHT ")'"
+        + + OBJ\->
+      \>>
   \>>
   ASINN
   \<<
-    AGB\-> TOLST
-    { ASIN } + \->ALG
+    \-> x
+      \<<
+        "'ASIN(" x DRPHT ")'"
+        + + OBJ\->
+      \>>
   \>>
   ACOSS
   \<<
-    AGB\-> TOLST
-    { ACOS } + \->ALG
+    \-> x
+      \<<
+        "'ACOS(" x DRPHT ")'"
+        + + OBJ\->
+      \>>
   \>>
   ATANN
   \<<
-    AGB\-> TOLST
-    { ATAN } + \->ALG
+    \-> x
+      \<<
+        "'ATAN(" x DRPHT ")'"
+        + + OBJ\->
+      \>>
   \>>
   XRT
   \<<
-    AGB2 INVV TOLS2
-    { ^ } + \->ALG
+    \-> x y
+      \<<
+        "'(" y DRPHT ")^(1/(" x DRPHT "))'"
+        + + + + OBJ\->
+      \>>
   \>>
   ABSS
   \<<
-    AGB\-> TOLST
-    { ABS } + \->ALG
+    \-> x
+      \<<
+        "'ABS(" x DRPHT ")'"
+        + + OBJ\->
+      \>>
   \>>
   ARGG
   \<<
-    AGB\-> TOLST
-    { ARG } + \->ALG
+    \-> x
+      \<<
+        "'ARG(" x DRPHT ")'"
+        + + OBJ\->
+      \>>
   \>>
   LOGG
   \<<
-    AGB\-> TOLST
-    { LOG } + \->ALG
+    \-> x
+      \<<
+        "'LOG(" x DRPHT ")'"
+        + + OBJ\->
+      \>>
   \>>
   ALOGG
   \<<
-    AGB\-> TOLST
-    { ALOG } + \->ALG
+    \-> x
+      \<<
+        "'ALOG(" x DRPHT ")'"
+        + + OBJ\->
+      \>>
   \>>
   SINHH
   \<<
-    AGB\-> TOLST
-    { SINH } + \->ALG
+    \-> x
+      \<<
+        "'SINH(" x DRPHT ")'"
+        + + OBJ\->
+      \>>
   \>>
   COSHH
   \<<
-    AGB\-> TOLST
-    { COSH } + \->ALG
+    \-> x
+      \<<
+        "'COSH(" x DRPHT ")'"
+        + + OBJ\->
+      \>>
   \>>
   TANHH
   \<<
-    AGB\-> TOLST
-    { TANH } + \->ALG
+    \-> x
+      \<<
+        "'TANH(" x DRPHT ")'"
+        + + OBJ\->
+      \>>
   \>>
   ASINHH
   \<<
-    AGB\-> TOLST
-    { ASINH } + \->ALG
+    \-> x
+      \<<
+        "'ASINH(" x DRPHT ")'"
+        + + OBJ\->
+      \>>
   \>>
   ACOSHH
   \<<
-    AGB\-> TOLST
-    { ACOSH } + \->ALG
+    \-> x
+      \<<
+        "'ACOSH(" x DRPHT ")'"
+        + + OBJ\->
+      \>>
   \>>
   ATANHH
   \<<
-    AGB\-> TOLST
-    { ATANH } + \->ALG
+    \-> x
+      \<<
+        "'ATANH(" x DRPHT ")'"
+        + + OBJ\->
+      \>>
+  \>>
+  SUMM
+  \<<
+    \-> i a b y
+      \<<
+        "'\GS(" i DRPHT "=" a DRPHT
+        "," b DRPHT "," y DRPHT ")'"
+        + + + + + + + + OBJ\->
+      \>>
   \>>
   DERV
   \<<
@@ -158,68 +248,23 @@ DIR
         + + + + + + + + OBJ\->
       \>>
   \>>
-  AGB\->
-  \<<
-    DUP
-    IF TYPE 9 ==
-    THEN
-      \->LST
-    END
-  \>>
-  AGB2
-  \<<
-    AGB\-> SWAP AGB\-> SWAP
-  \>>
   LSTORSTR
   \<<
     DUP2 DUP2
-    TYPE 5 == SWAP TYPE 5 == OR UNROT
+    TYPE 5 == SWAP TYPE 5 == OR
+    3 ROLLD
     TYPE 2 == SWAP TYPE 2 == OR
     OR
-  \>>
-  TOLS2
-  \<<
-    IF LSTORSTR
-    THEN
-      +
-    ELSE
-      2 \->LIST
-    END
-  \>>
-  TOLST
-  \<<
-    DUP
-    IF TYPE 5 \=/
-    THEN
-      1 \->LIST
-    END
-  \>>
-  NOHD
-  \<<
-    DUP SIZE 2 SWAP SUB
   \>>
   NOHT
   \<<
     DUP SIZE 1 - 2 SWAP SUB
   \>>
-  NOTL
-  \<<
-    DUP SIZE 1 - 1 SWAP SUB
-  \>>
   CKALG
   \<<
-    DUPDUP
+    DUP DUP
     TYPE 6 == SWAP TYPE 9 ==
     OR
-  \>>
-  DRPHD
-  \<<
-    IF CKALG
-    THEN
-      \->STR NOHD
-    ELSE
-      \->STR
-    END
   \>>
   DRPHT
   \<<
@@ -230,22 +275,13 @@ DIR
       \->STR
     END
   \>>
-  DRPTL
-  \<<
-    IF CKALG
-    THEN
-      \->STR NOTL
-    ELSE
-      \->STR
-    END
-  \>>
   RPEQKEYS
   \<< RCLKEYS 'OLDKEYS' STO
-  { ADDD 95.0 SUBB 85.0 MULL 75.0 DIVV 65.0 INVV 64.0 SQTT 52.0
-  SQQ 52.2 POWW 51.0 EXPP 51.2 LNN 51.3 SINN 53.0 COSS 54.0
-  TANN 55.0 ASINN 53.2 ACOSS 54.2 ATANN 55.2 XRT 52.3 ABSS 65.2
-  ARGG 65.3 LOGG 61.3 ALOGG 61.2 SINHH 53.6 COSHH 54.6 TANHH 55.6
-  ASINHH 53.51 ACOSHH 54.51 ATANHH 55.51 DERV 54.3 INTGL 55.3 }
+  { ADDD 95.0 SUBB 85.0 MULL 75.0 DIVV 65.0 INVV 46.0 SQTT 44.0
+  SQQ 44.2 POWW 45.0 EXPP 46.2 LNN 46.3 SINN 41.0 COSS 42.0 TANN 43.0
+  ASINN 41.2 ACOSS 42.2 ATANN 43.2 XRT 44.3 LOGG 45.3 ALOGG 45.2
+  SINHH 72.5 COSHH 73.5 TANHH 74.5 ASINHH 82.5 ACOSHH 83.5 ATANHH 84.5
+  ABSS 75.5 ARGG 75.6 SUMM 43.3 DERV 41.3 INTGL 42.3 }
   STOKEYS
   \>>
   RSTKEYS
@@ -256,7 +292,6 @@ DIR
   $TITLE "RPEQW Expression and Equation Builder"
   $VISIBLE { ADDD SUBB MULL DIVV INVV SQTT SQQ POWW EXPP LNN SINN COSS TANN
   ASINN ACOSS ATANN XRT ABSS ARGG LOGG ALOGG SINHH COSHH TANHH ASINHH ACOSHH
-  ATANHH DERV INTGL RPEQKEYS RSTKEYS }
-  $HIDDEN { AGB\-> AGB2 LSTORSTR TOLS2 TOLST NOHD NOHT NOTL CKALG DRPHD DRPHT
-  DRPTL }
+  ATANHH SUMM DERV INTGL RPEQKEYS RSTKEYS }
+  $HIDDEN { LSTORSTR NOHT CKALG DRPHT }
 END
