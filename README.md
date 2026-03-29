@@ -3,6 +3,8 @@ An 'Equation Writer' utility for the HP 49/50 calculators which leverages the in
 
 The included `INOUT` programme is not mine, but it's quite useful for translating between LF and CRLF line endings, and sharing content between emulators and physical devices. I found the code in this [HP Museum post](https://www.hpmuseum.org/forum/thread-13941-post-123629.html#pid123629).
 
+**\*_NEW!_\*** The [hp48](https://github.com/d45h-d07/rpeqw/tree/hp48g) branch was added recently to provide a modified version of this RPN helper utility for the HP 48G series (support for 48S models TBD). It is necessary to first install the libraries [ascsetup.lib](https://github.com/d45h-d07/rpeqw/releases/download/v0.1.3b-alpha/ascsetup.lib) and [algrpn.lib](https://github.com/d45h-d07/rpeqw/releases/download/v0.1.3b-alpha/algrpn.lib) (in that sequence) prior to installing and running this utility on a 48 series device. [ascsetup.lib](https://github.com/d45h-d07/rpeqw/releases/download/v0.1.3b-alpha/ascsetup.lib) can be deleted once the installation steps have been completed.
+
 **_NOTE_**: This software is distributed as is, and the author is not responsible for freezes, crashes or lost data. The usual caveats regarding third party scripts and code apply; please exercise caution and take appropriate precautionary measures. The following steps are recommended for safely testing this code.
 
 1. Back up your calculator data either to a PC or an SD card

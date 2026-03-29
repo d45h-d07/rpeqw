@@ -1,0 +1,26 @@
+%%HP: T(3)A(R)F(.);
+DIR
+  \->ALG
+  \<<
+    OBJ\-> RPN\->
+  \>>
+  \->LST
+  \<<
+    ALG\-> \->LIST
+  \>>
+  ALG\->
+    "D9D202BA812BF8194040379C1B2130C3D2"
+  RPN\->
+    "D9D2043C81D6450B2130474F"
+  SETUP             @Automatic setup program
+  \<< ALG\-> ASC\-> 'ALG\->' STO
+      RPN\-> ASC\-> 'RPN\->' STO
+      'SETUP' PURGE
+  \>>
+
+  $ROMID 1723
+  $CONFIG 1
+  $TITLE "A<->R conversion library"
+  $VISIBLE { \->ALG \->LST SETUP }
+  $HIDDEN { ALG\-> RPN\-> }
+END
