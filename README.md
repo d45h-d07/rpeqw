@@ -4,6 +4,8 @@ An 'Equation Writer' utility for the HP 49/50 calculators which leverages the in
 The included `INOUT` program is not mine, but it's quite useful for translating between HP and PC text characters, and sharing content between emulators and 
 physical devices. I found the code in this [HP Museum post](https://www.hpmuseum.org/forum/thread-13941-post-123629.html#pid123629).
 
+**\*_NEW!_\*** The [hp48](https://github.com/d45h-d07/rpeqw/tree/hp48g) branch was added recently to provide a modified version of this RPN helper utility for the HP 48G series (support for 48S models TBD). It is necessary to first install the libraries [ascsetup.lib](https://github.com/d45h-d07/rpeqw/releases/download/v0.1.3b-alpha/ascsetup.lib) and [algrpn.lib](https://github.com/d45h-d07/rpeqw/releases/download/v0.1.3b-alpha/algrpn.lib) (in that sequence) prior to installing and running this utility on a 48 series device. [ascsetup.lib](https://github.com/d45h-d07/rpeqw/releases/download/v0.1.3b-alpha/ascsetup.lib) can be deleted once the installation steps have been completed.
+
 **_NOTE_**: This software is distributed as is, and the author is not responsible for freezes, crashes or lost data. The usual caveats regarding third party scripts and code apply; please exercise caution and take appropriate precautionary measures. The following steps are recommended for safely testing this code.
 
 1. Back up your calculator data either to a PC or an SD card
@@ -24,8 +26,8 @@ The main concept behind this utility is that it should ideally permit the user t
    1. The rest of the instructions shall assume that the library file was chosen (if not, menu 256 has a `CRLIB` library creator utility to package the source code). It is also strongly recommended to toggle system flag 117 to use soft menus.
 2. Find the soft menu command corresponding to `rpeqw.lib` in the home directory and push its corresponding function key to place it on the stack
 3. Now store it to a suitable port (e.g., `2 STO`)
-4. Next, open the LIBRARY menu, select the appropriate port, and look for the soft menu entry `1613`
-5. First press RSHIFT ALPHA(ENTRY), then hit the `1613` soft menu button to place its complete path on the command line, and then type ATTACH and press ENTER
+4. Next, open the LIBRARY menu, select the appropriate port, and look for the soft menu entry `1726`
+5. First press RSHIFT ALPHA(ENTRY), then hit the `1726` soft menu button to place its complete path on the command line, and then type ATTACH and press ENTER
 6. Now go back to the main LIBRARY menu, and you should see an `RPEQW` folder soft menu entry in there -- press this key to go inside the menu
 7. Press LSHIFT NXT(PREV), and then the soft menu key corresponding to RPEQK (short for RPEQKEYS), which will take a second or so to generate the USER keyboard assignments for this utility
 8. Ensure the USER lock is enabled (LSHIFT ALPHA LSHIFT ALPHA, unless system flag 61 is set, in which case hitting this sequence just once will toggle the lock)
@@ -39,7 +41,7 @@ The source code uses the Development lib functions →ALG and →LST, so this li
 4. Transfer the `rpeqw.rpl` source file to the calculator
    1. On an HP 49/50 emulator, it might be necessary to delete the first line from the code and run ASCII translation -- check that it now registers as a valid directory after this step
 5. Go into the `RPEQW.RPL` directory
-6. Run the `CRLIB` command, and a library object with ID 1613 should appear on level 1 of the stack
+6. Run the `CRLIB` command, and a library object with ID 1726 should appear on level 1 of the stack
 7. (Recommended) Now you could follow steps 3 to 9 from the previous sub-section to start using the library
 
 ## Examples
